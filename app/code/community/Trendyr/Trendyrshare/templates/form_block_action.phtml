@@ -14,33 +14,40 @@ $trendyr_url_live  = 'https://api.trendyr.com/trendyr.js';
 $read_connection = $resource->getConnection('core_read');
 $table_name = $resource->getTableName('trendyrshare');
  	
-if($_POST['update'] == 1)
+
+if(isset($_POST['update']))
 {
-	//check if key exists in the db already.
-
-	$write_connection = $resource->getConnection('core_write');
-	
-	if($_POST['merchantkey'])
+	if($_POST['update'] == 1)
 	{
-		$binds = array('merchantkey'=>$_POST['merchantkey']);
-		$q = "UPDATE $table_name SET merchantkey=:merchantkey  WHERE id=1";	
+		//check if key exists in the db already.
+	
+		$write_connection = $resource->getConnection('core_write');
+		
+		if($_POST['merchantkey'])
+		{
+			$binds = array('merchantkey'=>$_POST['merchantkey']);
+			$q = "UPDATE $table_name SET merchantkey=:merchantkey  WHERE id=1";	
+			$write_connection->query($q, $binds);
+		}
+		
+		if($_POST['jsmode'])
+		{		
+			echo 'fired jsmode';
+			$jsmode = $_POST['jsmode'];
+			$q = "UPDATE $table_name SET jsmode='$jsmode' WHERE id=1";
+			$write_connection->query($q);
+		
+		}
+	
+		$binds = array('tcopy'=>$_POST['tcopy']);					
+		$q = "UPDATE $table_name SET tcopy=:tcopy WHERE id=1";
 		$write_connection->query($q, $binds);
-	}
-	
-	if($_POST['jsmode'])
-	{		
-		echo 'fired jsmode';
-		$jsmode = $_POST['jsmode'];
-		$q = "UPDATE $table_name SET jsmode='$jsmode' WHERE id=1";
-		$write_connection->query($q);
-	
+		
 	}
 
-	$binds = array('tcopy'=>$_POST['tcopy']);					
-	$q = "UPDATE $table_name SET tcopy=:tcopy WHERE id=1";
-	$write_connection->query($q, $binds);
-	
 }
+
+
 
 //setup the form
 $q = "SELECT * from $table_name";

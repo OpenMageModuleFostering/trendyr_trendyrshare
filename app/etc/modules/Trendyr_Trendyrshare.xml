@@ -3,7 +3,7 @@
     <modules>
         <Trendyr_Trendyrshare>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Trendyr_Trendyrshare>
     </modules>
 </config> 

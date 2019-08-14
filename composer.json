@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "ASL",
     "homepage": "",
-    "description": "Trendyr module allows sharing of products on social networks for a discount",
+    "description": "Trendyr social share productions on checkout",
     "authors": [
     {
         "name": "Steve Barbera",

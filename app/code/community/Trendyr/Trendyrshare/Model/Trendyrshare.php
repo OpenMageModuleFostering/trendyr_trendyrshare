@@ -6,8 +6,6 @@ class Trendyr_Trendyrshare_Model_Trendyrshare extends Varien_Object{
 
 	public static function getTrendyrshare()
 	{
-
-
 	
 	   //if there's not a merch key, shut it down.	
 	 	if(!$merchant_public_key = self::get_merch_key()){return false;}
