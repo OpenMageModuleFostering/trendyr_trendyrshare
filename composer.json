@@ -1,12 +1,12 @@
 {
     "name": "OpenMageModuleFostering/Trendyr_Trendyrshare",
     "type": "magento-module",
-    "license": "APACHE-V2",
+    "license": "ASL",
     "homepage": "",
-    "description": "This extension allows a checkout to use the Trendyr service.",
+    "description": "Trendyr module allows sharing of products on social networks for a discount",
     "authors": [
     {
-        "name": "Trendyr",
+        "name": "Steve Barbera",
         "email": "info@trendyr.com"
     }
 ],

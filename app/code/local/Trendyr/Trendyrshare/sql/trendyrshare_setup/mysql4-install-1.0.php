@@ -9,17 +9,17 @@
     DROP TABLE IF EXISTS {$this->getTable('trendyrshare')};
 
     CREATE TABLE {$this->getTable('trendyrshare')} (
-     `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-      `jsmode` varcar(255) NOT NULL default '',
-      `tcopy` text,
-      `merchantkey` varchar(255) NOT NULL default '',
-	  PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-	
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `merchantkey` varchar(255) NOT NULL DEFAULT '',
+    `jsmode` varchar(255) DEFAULT NULL,
+    `tcopy` text,
+     PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;	
   ");
+    
 
 	$installer->run("INSERT INTO {$this->getTable('trendyrshare')} (merchantkey) VALUES ('');"); 
-	$installer->run("INSERT INTO {$this->getTable('trendyrshare')} (jsmode) VALUES ('https://api.trendyr.com/trendyr.js');");
+	$installer->run("UPDATE {$this->getTable('trendyrshare')} set jsmode='https://api.trendyr.com/trendyr.js' WHERE id=1;");
 
   $installer->run("
 

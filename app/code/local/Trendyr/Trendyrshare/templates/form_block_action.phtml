@@ -29,7 +29,7 @@ if($_POST['update'] == 1)
 	
 	if($_POST['jsmode'])
 	{		
-		
+		echo 'fired jsmode';
 		$jsmode = $_POST['jsmode'];
 		$q = "UPDATE $table_name SET jsmode='$jsmode' WHERE id=1";
 		$write_connection->query($q);

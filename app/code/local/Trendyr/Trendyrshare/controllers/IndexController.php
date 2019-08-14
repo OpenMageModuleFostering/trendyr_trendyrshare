@@ -5,12 +5,10 @@ class Trendyr_Trendyrshare_IndexController extends Mage_Adminhtml_Controller_Act
 
     public function indexAction()
     {
-
 		$this->loadLayout();			
-    	$block = $this->getLayout()->createBlock('trendyrshare/template')
-    	->setTemplate('form_block_action.phtml');
-    	
-    	$this->_addContent($block);
+    	//$this->_initCssBlock();
+
+        $this->_addContent($this->getLayout()->createBlock('trendyrshare/template')->setTemplate('form_block_action.phtml'));
     	$this->renderLayout();		
 
     	

@@ -8,6 +8,7 @@ class Trendyr_Trendyrshare_Model_Trendyrshare extends Varien_Object{
 	{
 
 
+	
 	   //if there's not a merch key, shut it down.	
 	 	if(!$merchant_public_key = self::get_merch_key()){return false;}
 
@@ -25,13 +26,20 @@ class Trendyr_Trendyrshare_Model_Trendyrshare extends Varien_Object{
 	private function trendyr_curl($trendyr_product_data, $social_key = null)
 	{
 			
+	  //grab the URL from the db
+		$resource = Mage::getSingleton('core/resource');
+	    $read_connection = $resource->getConnection('core_read');
+	    $table_name = $resource->getTableName('trendyrshare');
+	    $q = "SELECT * from $table_name";
+	    $r = $read_connection->fetchAll($q);
 
-		$trendyr_url = 'http://sandbox.trendyr.com';   //dev url
-		
+	    $api_url = pathinfo($r[0]['jsmode']);
+	    $api_url = $api_url['dirname'];
+	    
 	  //is there a social key? make a url choice based on that.
 		$social_key ? 
-			$url = $trendyr_url.'/transaction/update/'.$social_key :
-			$url = $trendyr_url.'/transaction/create'; 
+			$url = $api_url.'/transaction/update/'.$social_key :
+			$url = $api_url.'/transaction/create'; 
 
 		$trendyr_product_data_string =  http_build_query($trendyr_product_data);
 	 
