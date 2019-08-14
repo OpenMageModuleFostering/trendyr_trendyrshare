@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Trendyr_Trendyrshare",
+    "type": "magento-module",
+    "license": "APACHE-V2",
+    "homepage": "",
+    "description": "This extension allows a checkout to use the Trendyr service.",
+    "authors": [
+    {
+        "name": "Trendyr",
+        "email": "info@trendyr.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

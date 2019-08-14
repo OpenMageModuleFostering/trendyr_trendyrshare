@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Trendyr_Trendyrshare</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.apache.org/licenses/LICENSE-2.0.html">APACHE V2</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension allows a checkout to use the Trendyr service.</summary>
+    <description>This extension allows a checkout to use the Trendyr service.</description>
+    <notes>This is tested to run with the default checkout setup.</notes>
+    <authors><author><name>Trendyr</name><user>trendyr</user><email>info@trendyr.com</email></author></authors>
+    <date>2012-08-07</date>
+    <time>15:13:42</time>
+    <contents><target name="magelocal"><dir name="Trendyr"><dir name="Trendyrshare"><dir name="Block"><dir name="Sales"><dir name="Order"><file name="Total.php" hash="411a319e2b492a22544bef8809802b7a"/></dir></dir><file name="Template.php" hash="ab50f42f19119b08b0a29559bf13e115"/></dir><dir name="Helper"><file name="Data.php" hash="5ff36855d52b16de7cf6ac9c29469c3e"/></dir><dir name="Model"><file name="Observer.php" hash="21afccea7c98498c73a8cc708b239755"/><dir name="Sales"><dir name="Order"><dir name="Total"><dir name="Creditmemo"><file name="Trendyr.php" hash="46790941ddf158f1a34a180e35a8205a"/></dir><dir name="Invoice"><file name="Trendyr.php" hash="2a313d89b5ee0ccc004153555b70aac9"/></dir></dir></dir><dir name="Quote"><dir name="Address"><dir name="Total"><file name="Trendyrshare.php" hash="4914701d5fa568a1267b738836c3cca6"/></dir></dir></dir></dir><file name="Trendyrshare.php" hash="46f13f65280452f31d03ffea760d032c"/></dir><dir name="controllers"><file name="IndexController.php" hash="db00d66bd927109405c922694e8a2218"/></dir><dir name="etc"><file name="config.xml" hash="14229c1257a637cc7c0846de73b811c5"/></dir><dir name="sql"><dir name="trendyrshare_setup"><file name="mysql4-install-1.0.php" hash="6838031d37e0fac933c27a6378f7e99f"/></dir></dir><dir name="templates"><file name="form_block_action.phtml" hash="915b9844a6488c83ac5f46e4ec4c04a6"/><dir name="resources"><file name="trendyr.js" hash="d41d8cd98f00b204e9800998ecf8427e"/><file name="trendyr_background.png" hash="c7d74d45f01e20bafc11e8d16fa0ce87"/><file name="trendyr_fish.png" hash="fab6eefa84f91e0af3e9d86904bdaa3e"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="trendyrshare.xml" hash="0b8577cc69cf51735414180da439df24"/></dir><dir name="template"><dir name="trendyrshare"><file name="cart_trendyr_button.phtml" hash="1338073a019aa8d07bdff1a5970bb582"/><file name="on_success.phtml" hash="94f5e49d2ac1234a8574a23e33fceb1a"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Trendyr_Trendyrshare.xml" hash="8ba423b88e654a90e0b9fb4a695aa7f9"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
