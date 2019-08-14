@@ -8,7 +8,8 @@ class Trendyr_Trendyrshare_Model_Trendyrshare extends Varien_Object{
 	{
 	
 	   //if there's not a merch key, shut it down.	
-	 	if(!$merchant_public_key = self::get_merch_key()){return false;}
+	 	if(!($merchant_public_key = self::get_merch_key())){return false;}
+
 
 	  //prep an array of cart items for Trendyr	
 		$checkout_items = Mage::getSingleton('checkout/session')->getQuote()->getAllVisibleItems();
