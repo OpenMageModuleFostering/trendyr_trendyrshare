@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Trendyr_Trendyrshare",
+    "name": "OpenMageModuleFostering\/Trendyr_Trendyrshare",
     "type": "magento-module",
     "license": "ASL",
     "homepage": "",
     "description": "Trendyr social share productions on checkout",
     "authors": [
-    {
-        "name": "Steve Barbera",
-        "email": "info@trendyr.com"
-    }
-],
+        {
+            "name": "Steve Barbera",
+            "email": "info@trendyr.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
